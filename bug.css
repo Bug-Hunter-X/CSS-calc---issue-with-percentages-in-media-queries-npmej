@@ -1,0 +1,11 @@
+The CSS property `calc()` is not working as expected when used with percentage values inside a media query. For example, the following code snippet intends to set the width of an element to 50% of its parent's width, but it's not working properly inside a specific media query:
+
+```css
+@media (max-width: 768px) {
+  .element {
+    width: calc(50% - 20px);
+  }
+}
+```
+
+The issue is that the `calc()` function might not be correctly interpreting the percentage within the media query context. This can lead to unexpected layout behavior, where the element's width does not adjust as expected when the screen size changes.
